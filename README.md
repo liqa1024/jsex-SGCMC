@@ -33,7 +33,7 @@
       ```text
       ├─lib
       │ ├─groovy
-      │ │ └─lib
+      │ │ └─lmp
       │ │   ├─FixSgcmcNNAP.groovy
       │ │   ├─FixFlipNNAP.groovy
       │ │   └─FixFlipNNAPScaled.groovy
@@ -61,7 +61,7 @@ As a many-body interaction, NNAP requires double the cutoff radius to strictly c
 comm_modify cutoff 14.0
 ```
 
-($r_{c} = 6.0,~~6.0 \times 2.0 + 2.0 = 14.0$). A simpler method is to configure the fix and run it serially; the program will output a suggested setting prompt. For specific settings, please refer to the example file `flipFe.lmpin` and the comments in the source code.
+($r_{c} = 6.0,~~6.0 \times 2 + 2.0 = 14.0$). A simpler method is to configure the fix and run it serially; the program will output a suggested setting prompt. For specific settings, please refer to the example file `flipFe.lmpin` and the comments in the source code.
 
 
 # Citation
