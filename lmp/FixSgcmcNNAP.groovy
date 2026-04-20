@@ -1,5 +1,5 @@
 /**
- * This file is part of example scripts of FFS in jse
+ * This file is part of (VC-)SCGMC expansion of NNAP in jse
  * Copyright 2025 Qing'an Li
  *
  * This program is free software: you can redistribute it and/or modify

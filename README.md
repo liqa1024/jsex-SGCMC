@@ -24,11 +24,11 @@
    jse --jnibuild
    ```
 
-2. Ensure that the `lmp` folder is in the `jse` Groovy classpath. You can choose one of the following methods:
+2. Ensure that the `lmp` folder is in the `jse` Groovy classpath. You can **choose one** of the following methods:
 
     * `jse` adds the current working directory to the classpath, so you can simply ensure that the `lmp` folder exists in the current running directory.
 
-    * Place the `lmp` folder inside the `lib/groovy` directory of `jse`. `jse` automatically adds this directory to the classpath:
+    * **OR**, place the `lmp` folder inside the `lib/groovy` directory of `jse`. `jse` automatically adds this directory to the classpath:
 
       ```text
       ├─lib
@@ -41,7 +41,7 @@
       └─jse
       ```
 
-    * Add the directory containing `lmp` to the `JSE_GROOVY_EXLIB_DIRS` environment variable:
+    * **OR**, add the directory containing `lmp` to the `JSE_GROOVY_EXLIB_DIRS` environment variable:
 
       ```shell
       export JSE_GROOVY_EXLIB_DIRS="path/to/your/package/dir:$JSE_GROOVY_EXLIB_DIRS"
