@@ -1,6 +1,6 @@
 # Requirement
 
-- [jse](https://github.com/liqa1024/jse/) (v3.13.7 is recommended)
+- [jse](https://github.com/liqa1024/jse/) (>= 4.0.0)
 
 - C & C++ Compiler
 

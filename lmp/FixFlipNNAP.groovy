@@ -1,6 +1,6 @@
 /**
  * This file is part of (VC-)SCGMC expansion of NNAP in jse
- * Copyright 2025 Qing'an Li
+ * Copyright 2026 Qing'an Li
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -49,7 +49,7 @@ class FixFlipNNAP extends FixSgcmcNNAP {
             int nnapType = nnap.typeOf(elem)
             if (nnapType <= 0) throw new IllegalArgumentException("Invalid element ($elem) in pair_coeff")
             lmpType2nnapType[type] = nnapType
-            cutoff[type] = nnap.model(nnapType).basis().rcut()
+            cutoff[type] = nnap.rcut(nnapType)
             cutsq[type] = cutoff[type]*cutoff[type]
         }
         cutoffmax = cutoff.max(); cutmaxsq = cutoffmax*cutoffmax

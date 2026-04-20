@@ -1,6 +1,6 @@
 /**
  * This file is part of (VC-)SCGMC expansion of NNAP in jse
- * Copyright 2025 Qing'an Li
+ * Copyright 2026 Qing'an Li
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,11 +20,11 @@ package lmp
 import groovy.transform.CompileStatic
 import jse.cache.IntVectorCache
 import jse.cache.MatrixCache
-import jse.clib.IntCPointer
-import jse.clib.NestedIntCPointer
 import jse.code.UT
 import jse.code.collection.IntList
 import jse.code.random.IRandom
+import jse.cptr.IntCPointer
+import jse.cptr.NestedIntCPointer
 import jse.lmp.LmpPlugin
 import jse.math.MathEX
 import jse.math.matrix.RowMatrix
@@ -110,7 +110,7 @@ class FixSgcmcNNAP extends LmpPlugin.Fix {
             int nnapType = nnap.typeOf(elem)
             if (nnapType <= 0) throw new IllegalArgumentException("Invalid element ($elem) in pair_coeff")
             lmpType2nnapType[type] = nnapType
-            cutoff[type] = nnap.model(nnapType).basis().rcut()
+            cutoff[type] = nnap.rcut(nnapType)
             cutsq[type] = cutoff[type]*cutoff[type]
         }
         cutoffmax = cutoff.max(); cutmaxsq = cutoffmax*cutoffmax
