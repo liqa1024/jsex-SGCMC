@@ -26,7 +26,16 @@
 
 2. Ensure that the `lmp` folder is in the `jse` Groovy classpath. You can **choose one** of the following methods:
 
-    * `jse` adds the current working directory to the classpath, so you can simply ensure that the `lmp` folder exists in the current running directory.
+    * `jse` adds the current working directory to the classpath, so you can simply ensure that the `lmp` folder exists in the current running directory:
+      
+      ```text
+      ├─your_working_dir
+      │  └─lmp
+      │    ├─FixSgcmcNNAP.groovy
+      │    ├─FixFlipNNAP.groovy
+      │    └─FixFlipNNAPScaled.groovy
+      └─flipFe.lmpin
+      ```
 
     * **OR**, place the `lmp` folder inside the `lib/groovy` directory of `jse`. `jse` automatically adds this directory to the classpath:
 
@@ -66,7 +75,8 @@ comm_modify cutoff 14.0
 
 # Citation
 
-_TODO_
+Qing'an Li, Lilong Luo, Jian Li, Pengfei Guan,
+Magnetic Machine-Learning Potential Unveils a Barrierless Martensitic Pathway in Iron.
 
 
 # License
